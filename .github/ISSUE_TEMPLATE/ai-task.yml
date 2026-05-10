@@ -1,0 +1,34 @@
+name: AI Task
+about: Structured task for Claude, Codex, Gemini, or MCP-backed automation
+title: "[AI Task]: "
+labels: ["ai-task"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should change or be decided?
+    validations:
+      required: true
+  - type: dropdown
+    id: primary_agent
+    attributes:
+      label: Primary agent
+      options:
+        - Claude architect
+        - Codex execution engineer
+        - Gemini research/review
+        - MCP/tool automation
+        - Human/manual
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and safety rules
+      description: Include secrets, data, migration, billing, or destructive-risk constraints.
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification expectations
+      description: Tests, screenshots, logs, migrations, or runbooks required.
